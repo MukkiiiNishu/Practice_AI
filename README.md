@@ -325,3 +325,61 @@ For your performance evaluation, here's a comprehensive structure that emphasize
    - Devised strategies for reducing memory and processing overhead, particularly during simultaneous task evaluations.
 
 This structured documentation should effectively showcase your technical skills and efforts while working on this project. If needed, provide specific outputs, such as patch examples or benchmark results, to further strengthen your evaluation.
+
+
+
+
+For your performance evaluation in the **Samsung PRISM** program, you can highlight the following aspects to showcase your contributions and technical expertise:
+
+---
+
+### 1. **Overview of Worklets**
+   - Actively engaged in **two real-world worklets** with students:
+     1. **Large Table Summarization Dataset Creation.**
+     2. **LLM Model Evaluation Benchmark Creation.**
+
+### 2. **Worklet 1: Large Table Summarization Dataset Creation**
+   - **Problem Statement**: Open-source LLMs initially failed to generate accurate summaries for large tabular datasets due to hallucinations and inconsistent outputs.
+   - **Key Contributions**:
+     - Collaborated with students to:
+       - **Understand the limitations of open-source LLMs** with respect to tabular data processing.
+       - Generate a robust dataset by summarizing large tables effectively.
+     - Provided technical guidance on the **end-to-end workflow** for fine-tuning LLMs.
+     - Assisted in **fine-tuning open-source LLMs** to handle tabular data more effectively.
+     - Conducted iterative testing and validation, ensuring enhanced accuracy for summarizations.
+   - **Outcome**:
+     - The student-led effort improved LLM performance significantly within the timeline.
+     - Results integrated into the **SE Data Visualization Tool** to process CSV data more efficiently, delivering tangible improvements.
+
+---
+
+### 3. **Worklet 2: LLM Model Evaluation Benchmark Creation**
+   - **Objective**: Design a comprehensive framework to evaluate LLM capabilities across diverse aspects such as accuracy, bug handling, and logical reasoning.
+   - **Key Contributions**:
+     - Provided students with knowledge on existing open-source LLM evaluation methods.
+     - Guided them to create a **custom evaluation dataset** covering:
+       - Sample questions.
+       - Code snippets.
+       - Logical tasks and bug identification scenarios.
+     - Assisted in implementing an **evaluation framework** to compare the performance of in-house and open-source LLMs.
+   - **Outcome**:
+     - Successfully developed a scalable framework for LLM evaluation.
+     - Enabled better benchmarking of models' performance across diverse tasks, supporting both in-house and open-source LLM testing.
+
+---
+
+### 4. **Skills Demonstrated**
+   - **Technical Leadership**:
+     - Mentored and guided students through complex AI workflows and frameworks.
+   - **Problem Solving**:
+     - Addressed LLM hallucination issues and dataset challenges effectively.
+   - **Collaboration**:
+     - Worked closely with students and professors, fostering a hands-on learning environment.
+   - **Innovation**:
+     - Designed and executed a custom evaluation framework tailored to organizational needs.
+
+### 5. **Impact**
+   - Empowered students with advanced knowledge in LLM fine-tuning and evaluation.
+   - Delivered practical tools and datasets for real-world applications, showcasing immediate value in organizational projects.
+
+This narrative highlights your efforts as a mentor and technical contributor while emphasizing the measurable outcomes of both worklets.
