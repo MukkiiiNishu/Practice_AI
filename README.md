@@ -1,7 +1,6 @@
 
-1. **Understanding Business Strategy**: I continuously aligned the development of the Video Learning Assistant tool with the company’s overarching goals and direction, ensuring it complemented the larger vision for innovation and efficiency.
+1. **Holistic Analysis in Auto Code Rover**: Analyzed and understood challenges in automating repetitive coding tasks. Collaborated with teams to test various approaches, ultimately selecting methods that maximized efficiency and usability, aligning with organizational goals.
 
-2. **Industry Trends Awareness**: Actively stayed updated on emerging technologies and trends within the tech and AI space, applying this knowledge to enhance the product and ensure its competitiveness in the market.
+2. **Solution Evaluation for SE Data Tool**: Identified the limitations of existing tabular data handling by open-source LLMs. Proposed a refined dataset and finetuning approach, considering both short-term improvements and long-term scalability.
 
-3. **Creating Opportunities**: By understanding the industry’s trajectory, I identified opportunities to integrate innovative solutions into the tool, making it a cutting-edge asset for the organization.
-
+3. **Innovative Development for Video Learning Assistant**: Redesigned the tool's frontend using Node-React for a faster, more interactive experience. Explored RAG database solutions to enhance support for long-form video processing. Demonstrated strong decision-making by balancing tight deadlines with learning new technologies to deliver a robust solution.
