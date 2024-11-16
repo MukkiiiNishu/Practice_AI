@@ -245,3 +245,44 @@ The Learn.I platform supports diverse corporate and educational needs, including
 - Expansion to support diverse multimedia use cases across industries.  
 
 By creating a robust, privacy-first platform for video interaction, Learn.I establishes itself as a critical enabler of knowledge dissemination and productivity in corporate and educational domains.  
+
+
+
+
+Based on my analysis of Microsoft's LIDA framework and its features, here are points you can highlight in your performance evaluation for developing the SE (an in-house POC based on LIDA):
+
+---
+
+### **Performance Evaluation: Key Contributions**
+
+#### **1. Development of SE: A Custom Data Visualization Tool**
+- Designed and implemented **SE**, an in-house alternative to Microsoft's LIDA framework, customized for the organization’s specific needs.
+- Built the system to align with LIDA's core functionality, including:
+  - **Data Summarization:** Automated conversion of raw datasets into natural language summaries for easier comprehension.
+  - **Visualization Goal Exploration:** Automated enumeration of potential visualization objectives based on dataset properties.
+  - **Visualization Code Generation:** Developed a robust pipeline for creating, evaluating, and refining data visualizations programmatically.
+  - **Infographic Generation:** Delivered stylized, data-faithful visuals leveraging the organization's privacy-first AI capabilities.
+
+#### **2. Backend Architecture and Performance Enhancements**
+- Developed SE using **Flask** with multithreading to handle high concurrency scenarios, ensuring responsiveness for diverse user bases such as RPA and SE BOT teams.
+- Integrated modular API endpoints to facilitate seamless interaction with external systems, enabling integration into automated workflows.
+- Optimized data handling pipelines to achieve **70% accuracy** on CSV data analysis, outperforming LIDA in targeted scenarios by refining prompt engineering and vector search techniques.
+
+#### **3. Integration of Advanced LLM Capabilities**
+- Experimented with and adapted **open-source LLMs** (e.g., Llama, Meta models) for various tasks, balancing accuracy and computational efficiency.
+- Enhanced performance using **DevinAI**, leveraging tailored prompt engineering to align model outputs with organizational needs.
+- Enabled local model hosting to address privacy concerns and ensure data compliance while delivering robust AI-powered features.
+
+#### **4. Comprehensive Customization and Deployment**
+- Customized SE to include:
+  - Multi-library support, similar to LIDA, for compatibility with popular visualization tools like Matplotlib and Seaborn.
+  - Support for **modular upgrades**, including future adoption of multi-modal LLMs for non-textual data processing.
+- Successfully deployed SE to internal teams, creating user interfaces for direct interactions and providing APIs for backend integrations.
+
+#### **5. Evaluation and Refinement Based on LIDA**
+- Conducted a detailed comparative analysis of LIDA to identify its strengths and limitations, using insights to develop a more focused and efficient in-house tool.
+- Adopted a systematic approach to evaluate different LLM workflows, including integration with local models (e.g., HuggingFace) and exploring novel methods for visualization automation.
+
+---
+
+These points emphasize the technical depth and strategic importance of your contributions while highlighting your ability to adapt and innovate based on established frameworks like LIDA. Let me know if you'd like to refine these further!
