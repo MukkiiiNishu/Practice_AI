@@ -383,3 +383,68 @@ For your performance evaluation in the **Samsung PRISM** program, you can highli
    - Delivered practical tools and datasets for real-world applications, showcasing immediate value in organizational projects.
 
 This narrative highlights your efforts as a mentor and technical contributor while emphasizing the measurable outcomes of both worklets.
+
+
+
+
+For your performance evaluation under **DevinAI Promotion**, here’s a technical and comprehensive summary that showcases your efforts and impact:
+
+---
+
+### **Objective**
+Promote the in-house LLM model **DevinAI** across R&D teams by providing hands-on experience, collecting feedback, and ensuring tool adoption.
+
+---
+
+### **Key Contributions**
+
+#### 1. **Devin Lab Initiative**
+   - **Setup**:
+     - Established a dedicated lab with 10 laptops pre-installed with DevinAI for engineers to gain hands-on experience.
+   - **Engagement**:
+     - Invited over **300 R&D engineers** from various teams to participate in live demonstrations.
+     - Provided personalized, one-on-one, or small-group demonstrations of DevinAI's capabilities, addressing specific workflows and use cases.
+   - **Support**:
+     - Actively resolved technical challenges engineers faced during tool use, ensuring smooth operations.
+     - Stayed available during sessions to answer queries, troubleshoot issues, and explain features in detail.
+
+#### 2. **Feedback Collection and Analysis**
+   - Facilitated interactive sessions to gather user feedback on:
+     - Usability.
+     - Relevance of features to repetitive coding tasks.
+     - Suggestions for improvement.
+   - Documented positive feedback, which overwhelmingly indicated that DevinAI would significantly improve productivity by automating repetitive code-writing tasks.
+
+#### 3. **Broader Outreach and Training**
+   - Conducted **online sessions on Microsoft Teams** for remote teams, expanding the initiative's reach.
+   - Authored and shared **technical blogs** showcasing DevinAI’s unique features and best practices.
+   - Engaged engineers informally to provide a more approachable platform for understanding DevinAI’s impact, fostering stronger connections and awareness.
+
+#### 4. **Technical Assistance**
+   - Acted as the primary point of contact for tool-related issues, helping engineers set up DevinAI on their local systems.
+   - Provided **real-time troubleshooting support**, ensuring adoption barriers were minimized.
+
+---
+
+### **Impact**
+   - **Adoption and Awareness**:
+     - Engineers became more familiar with DevinAI's potential and functionality, with many expressing interest in integrating it into their daily workflows.
+     - Increased awareness of DevinAI's ability to automate repetitive tasks, streamlining engineering efforts.
+   - **Feedback-driven Development**:
+     - The feedback collected during the initiative contributed to refining DevinAI, aligning the tool's features with real-world user needs.
+   - **Cross-team Collaboration**:
+     - Enhanced collaboration between teams by serving as a bridge between DevinAI’s development and its users.
+
+---
+
+### **Key Skills Demonstrated**
+   - **Leadership and Initiative**:
+     - Designed and executed the Devin Lab project independently, coordinating across multiple teams.
+   - **Technical Expertise**:
+     - Delivered clear and detailed demonstrations of DevinAI’s capabilities.
+   - **Communication**:
+     - Effectively conveyed technical details to diverse audiences through in-person sessions, online webinars, blogs, and informal interactions.
+   - **Problem Solving**:
+     - Addressed technical and logistical challenges during the lab sessions, ensuring a seamless experience for users.
+
+This summary highlights your technical expertise and impactful contributions in promoting DevinAI, demonstrating your ability to lead initiatives that bridge development and end-user engagement.
