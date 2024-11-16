@@ -1,6 +1,7 @@
 
-1. **Holistic Analysis in Auto Code Rover**: Analyzed and understood challenges in automating repetitive coding tasks. Collaborated with teams to test various approaches, ultimately selecting methods that maximized efficiency and usability, aligning with organizational goals.
+1. **End-to-End Ownership for Video Learning Assistant**: Took full responsibility for revamping the tool’s frontend using Node-React, overcoming performance challenges in the earlier setup. Followed up with backend improvements, learning server configurations and RAG databases to ensure support for long-form video processing.
 
-2. **Solution Evaluation for SE Data Tool**: Identified the limitations of existing tabular data handling by open-source LLMs. Proposed a refined dataset and finetuning approach, considering both short-term improvements and long-term scalability.
+2. **Proactive Resolution in SE Data Tool Development**: Managed dependencies effectively while creating a summarization dataset and finetuning LLMs. Addressed risks by seeking support for refining evaluation processes, ensuring timely delivery.
 
-3. **Innovative Development for Video Learning Assistant**: Redesigned the tool's frontend using Node-React for a faster, more interactive experience. Explored RAG database solutions to enhance support for long-form video processing. Demonstrated strong decision-making by balancing tight deadlines with learning new technologies to deliver a robust solution.
+3. **Commitment in Auto Code Rover**: Led efforts to optimize coding automation workflows, coordinating with cross-functional teams to address dependencies and achieve organizational goals.
+
