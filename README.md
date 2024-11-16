@@ -286,3 +286,42 @@ Based on my analysis of Microsoft's LIDA framework and its features, here are po
 ---
 
 These points emphasize the technical depth and strategic importance of your contributions while highlighting your ability to adapt and innovate based on established frameworks like LIDA. Let me know if you'd like to refine these further!
+
+
+
+
+For your performance evaluation, here's a comprehensive structure that emphasizes your technical efforts and advanced understanding while working with the **Auto Code Rover** tool on the SWE benchmark:
+
+### 1. **Initial Research and Exploration**
+   - Conducted an in-depth review of the Auto Code Rover (ACR) repository to understand its architecture and core functionality. Key elements included:
+     - The three operational modes: GitHub issue resolution, local issue analysis, and SWE-bench task evaluations.
+     - Detailed setup procedures for running ACR in Docker containers and local environments, ensuring compatibility with SWE-bench tasks and GitHub workflows.
+
+### 2. **Environment Setup and Customization**
+   - Deployed the Docker container for ACR, ensuring compatibility with the specified Ubuntu 20.04 environment. This included downloading and configuring the 25GB prebuilt Docker image for SWE-bench evaluations.
+   - Customized configurations such as `vanilla-lite.conf` for SWE-bench tasks to ensure proper mapping between test cases and evaluation results.
+
+### 3. **Integration with In-house and Open-source Models**
+   - Integrated the in-house LLM into the ACR pipeline for SWE-bench tasks, modifying the system to optimize patch generation and issue resolution performance.
+   - Evaluated ACR’s functionality with open-source models (e.g., LLaMA and GPT-based systems), leveraging fine-tuning and prompt engineering techniques to align the models with SWE-bench requirements.
+
+### 4. **Implementation and Experimentation**
+   - Ran multiple experiments using ACR’s SWE-bench mode:
+     - Created task-specific configurations and conducted iterative runs to refine the output (e.g., using `scripts/run.py` for vanilla-lite tasks).
+     - Analyzed generated patches using the provided evaluation tools like Moatless EvalTools.
+   - Explored GitHub issue mode by testing ACR on live repositories, analyzing real-time issue resolution using different commits and issue IDs.
+
+### 5. **Performance Evaluation**
+   - Measured the success rate of the generated patches against SWE-bench benchmarks, comparing the effectiveness of in-house LLM and open-source models.
+   - Evaluated time complexity, cost efficiency (e.g., API usage costs with GPT-4), and resource consumption during patch generation.
+   - Documented cases where the in-house LLM outperformed or complemented open-source models.
+
+### 6. **Advanced Features Exploration**
+   - Tested ACR’s visualization tools by deploying the Web UI to analyze the step-by-step patch generation process for GitHub issues.
+   - Explored scenarios for optimizing the tool’s multi-tasking capabilities, ensuring seamless task mapping and parallel processing where feasible.
+
+### 7. **Challenges and Mitigation**
+   - Encountered challenges in integrating certain task-specific configurations with SWE-bench, addressed through advanced debugging and script modifications.
+   - Devised strategies for reducing memory and processing overhead, particularly during simultaneous task evaluations.
+
+This structured documentation should effectively showcase your technical skills and efforts while working on this project. If needed, provide specific outputs, such as patch examples or benchmark results, to further strengthen your evaluation.
