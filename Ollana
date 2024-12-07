@@ -1,0 +1,148 @@
+Certainly! Setting up and running the Ollama server on your Linux machine involves several steps. Let’s go through it step-by-step:
+
+
+---
+
+Step 1: Check System Requirements
+
+1. Ensure your Linux system has the following:
+
+64-bit architecture
+
+Minimum 4 GB of RAM (8 GB or more is better)
+
+Docker Installed (Ollama typically uses Docker for containerization)
+
+A stable internet connection.
+
+
+
+
+
+---
+
+Step 2: Install Docker (if not already installed)
+
+1. Update your package database:
+
+sudo apt update
+sudo apt upgrade
+
+
+2. Install prerequisites:
+
+sudo apt install -y apt-transport-https ca-certificates curl software-properties-common
+
+
+3. Add Docker’s official GPG key and repository:
+
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
+echo "deb [arch=amd64 signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+
+
+4. Install Docker:
+
+sudo apt update
+sudo apt install -y docker-ce docker-ce-cli containerd.io
+
+
+5. Verify Docker installation:
+
+docker --version
+
+
+6. Add your user to the Docker group to avoid using sudo for Docker commands:
+
+sudo usermod -aG docker $USER
+
+Logout and log back in to apply changes.
+
+
+
+
+---
+
+Step 3: Download the Ollama Server Docker Image
+
+1. Pull the Ollama Docker image:
+
+docker pull ollama/ollama
+
+
+
+
+---
+
+Step 4: Run the Ollama Server
+
+1. Start the Ollama server container:
+
+docker run -d --name ollama -p 8000:8000 ollama/ollama
+
+-d: Run the container in detached mode.
+
+--name ollama: Name the container for easier management.
+
+-p 8000:8000: Map the host’s port 8000 to the container’s port 8000.
+
+
+
+2. Confirm that the container is running:
+
+docker ps
+
+
+3. Access the server locally: Open your web browser and go to:
+
+http://localhost:8000
+
+
+
+
+---
+
+Step 5: Configure Ollama Server
+
+1. Configuration Files: If the server requires additional configuration, check the documentation provided with the Ollama project or inspect the Docker container for default configuration files:
+
+docker exec -it ollama bash
+
+
+2. Environment Variables: Use Docker's -e flag to set environment variables when starting the container, e.g.:
+
+docker run -d --name ollama -p 8000:8000 -e VARIABLE_NAME=value ollama/ollama
+
+
+
+
+---
+
+Step 6: Test the Server
+
+1. Use tools like curl to test the server API:
+
+curl http://localhost:8000/api/status
+
+
+2. Monitor server logs to ensure it’s functioning correctly:
+
+docker logs -f ollama
+
+
+
+
+---
+
+Step 7: (Optional) Set Up Auto-Start
+
+1. To ensure the server starts automatically on reboot, use Docker’s restart policy:
+
+docker update --restart always ollama
+
+
+
+
+---
+
+With these steps, you should have the Ollama server up and running on your Linux machine. If you encounter any issues, let me know, and I can help troubleshoot further!
+
