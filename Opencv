@@ -1,0 +1,205 @@
+Here’s the complete Python script for processing a video, detecting significant frame changes, extracting text using OCR (Tesseract), and summarizing the extracted text using OpenAI's GPT API.
+
+
+---
+
+Complete Python Script
+
+import cv2
+import imagehash
+from PIL import Image
+import os
+import pytesseract
+import openai
+
+# Set your OpenAI API key
+openai.api_key = "your-openai-api-key"
+
+def process_video(video_path, output_dir, threshold=5):
+    """
+    Process the video, detect significant frame changes, and extract text.
+    """
+    if not os.path.exists(output_dir):
+        os.makedirs(output_dir)
+    
+    # Open the video
+    cap = cv2.VideoCapture(video_path)
+    prev_hash = None
+    frame_count = 0
+    saved_count = 0
+    extracted_text = []
+
+    while True:
+        ret, frame = cap.read()
+        if not ret:
+            break
+        
+        # Save frame temporarily as an image
+        frame_path = f"{output_dir}/temp_frame.png"
+        cv2.imwrite(frame_path, frame)
+        
+        # Compute perceptual hash for the current frame
+        current_hash = imagehash.average_hash(Image.open(frame_path))
+        
+        # Compare with the previous frame's hash
+        if prev_hash is None or abs(prev_hash - current_hash) > threshold:
+            # Save the frame as it is significantly different
+            saved_frame_path = f"{output_dir}/frame_{saved_count:04d}.png"
+            cv2.imwrite(saved_frame_path, frame)
+            saved_count += 1
+            prev_hash = current_hash
+
+            # Extract text from the saved frame using Tesseract
+            text = pytesseract.image_to_string(Image.open(saved_frame_path))
+            if text.strip():  # Only save if text is extracted
+                extracted_text.append({
+                    "timestamp": cap.get(cv2.CAP_PROP_POS_MSEC) / 1000,  # Timestamp in seconds
+                    "text": text.strip()
+                })
+        
+        frame_count += 1
+    
+    cap.release()
+    # Remove temporary file
+    if os.path.exists(frame_path):
+        os.remove(frame_path)
+
+    print(f"Processed {frame_count} frames, saved {saved_count} unique frames.")
+    return extracted_text
+
+def summarize_text(extracted_text):
+    """
+    Summarize the extracted text using OpenAI GPT API.
+    """
+    if not extracted_text:
+        print("No text extracted from the video.")
+        return None
+
+    # Prepare text for summarization
+    text_data = "\n".join(
+        [f"{entry['timestamp']:.2f}s: {entry['text']}" for entry in extracted_text]
+    )
+
+    # Summarize using OpenAI GPT API
+    try:
+        response = openai.ChatCompletion.create(
+            model="gpt-4",
+            messages=[
+                {"role": "system", "content": "You are a helpful assistant."},
+                {"role": "user", "content": f"Summarize the following text:\n\n{text_data}"}
+            ]
+        )
+        summary = response['choices'][0]['message']['content']
+        return summary
+    except Exception as e:
+        print("Error during summarization:", e)
+        return None
+
+if __name__ == "__main__":
+    # Input video path
+    video_path = "input_video.mp4"  # Replace with your video file path
+    output_dir = "processed_frames"  # Directory to save processed frames
+    
+    # Step 1: Process video and extract text
+    extracted_text = process_video(video_path, output_dir)
+
+    # Step 2: Summarize extracted text
+    summary = summarize_text(extracted_text)
+
+    # Step 3: Save results
+    if summary:
+        with open("video_summary.txt", "w") as f:
+            f.write("Summary of the Video:\n")
+            f.write(summary)
+        print("Summary saved to 'video_summary.txt'.")
+    else:
+        print("No summary generated.")
+
+
+---
+
+Explanation
+
+1. Frame Differencing:
+
+Extracts frames where screen content changes significantly using perceptual hashing.
+
+The threshold parameter controls sensitivity.
+
+
+
+2. OCR with Tesseract:
+
+Text is extracted from the significant frames. Only frames with non-empty text are saved for further processing.
+
+
+
+3. Summarization with OpenAI:
+
+Extracted text with timestamps is combined into a single string.
+
+The text is passed to OpenAI’s GPT API for summarization.
+
+
+
+4. Output:
+
+Frames with significant changes are saved in the processed_frames directory.
+
+Extracted text is summarized and saved as video_summary.txt.
+
+
+
+
+
+---
+
+Requirements
+
+1. Install Required Libraries:
+
+pip install opencv-python pillow pytesseract openai imagehash
+
+
+2. Tesseract OCR:
+
+Install Tesseract OCR on your system:
+
+Linux: sudo apt install tesseract-ocr
+
+Windows: Download from here.
+
+
+Configure the path to Tesseract if it’s not in your system's PATH:
+
+pytesseract.pytesseract.tesseract_cmd = r"C:\Program Files\Tesseract-OCR\tesseract.exe"
+
+
+
+3. OpenAI API Key:
+
+Replace "your-openai-api-key" with your actual API key.
+
+
+
+
+
+---
+
+Output Files
+
+1. Processed Frames:
+
+Significant frames are saved in the processed_frames directory.
+
+
+
+2. Extracted Text Summary:
+
+Summarized content is saved in video_summary.txt.
+
+
+
+
+Let me know if you need further customization!
+
